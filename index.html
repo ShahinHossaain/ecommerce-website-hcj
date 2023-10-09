@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Site</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
     <section id="header">
-        <img style="height: 45px;border-radius: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkBy8JRJVTRayqtduriksP5agMpCwjSKArQ&usqp=CAU" alt="" srcset="">
+        <img style="height: 35px;border-radius: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkBy8JRJVTRayqtduriksP5agMpCwjSKArQ&usqp=CAU" alt="" srcset="">
 
         <div>
             <ul id="navbar">
+                <i id="sideNavClose" class="fa-regular fa-circle-xmark"></i>
                 <li><a class="active" href="index.jtml">Home</a></li>
                 <li><a href=shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html "><i class="fa fa-shopping-bag"></i></a></li>
+                <li id="lg-bag"><a href="cart.html "><i class="fa fa-shopping-bag"></i></a></li>
             </ul>
         </div>
 
         <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
 
@@ -43,6 +45,10 @@
         <div class="fe-box">
             <img src="image/features/f1.png" alt="">
             <h6>Free Shopping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/undraw_Online_payments_re_y8f2.png" alt="">
+            <h6>Send Money</h6>
         </div>
         <div class="fe-box">
             <img src="image/features/f2.png" alt="">
@@ -436,6 +442,6 @@
     </footer>
     
 
-    <script src="style.css"></script>
+    <script src="code.js"></script>
 </body>
 </html>
