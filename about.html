@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: antiquewhite; 
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            background: url(image/products/f1.jpg);
+            background-size: 100% 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+        #first {
+            top: 50%;
+            left: 21%;
+            transform: translateY(-50%);
+        }
+        #second {
+            background-size: 600% 600%;
+            top: 50%;
+            left: 53%;
+            transform: translateY(-50%);
+            display: none;
+        }
+        #lens {
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 0, 0, .4);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <div id="first">
+    <div id="lens">
+
+    </div>
+   </div>
+   <div id="second">
+   </div>
+
+   <script>
+    let lens = document.getElementById('lens')
+    let first = document.getElementById('first')
+    let second = document.getElementById('second')
+
+    first.addEventListener('mousemove', (e) => {
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+
+        console.log('ee', e.target.offsetLeft, e.target.offsetTop, x, y)
+
+        lens.style.left = x + 'px';
+        lens.style.top = y + 250 + 'px';
+
+        second.style.backgroundPositionX = (x - (500 / 2 / 6)) * -6 + 'px' 
+        // second.style.backgroundPositionX = x + 'px' 
+        second.style.backgroundPositionY = (y - (500 / 2 / 6) + 250) * -6 + 'px'; 
+
+        // second.style.backgroundPositionX = -1256 + 'px';
+        // second.style.backgroundPositionY = -1358 + 'px';
+
+        second.style.display = 'block';
+        lens.style.display = 'block';
+    })
+
+    first.addEventListener('mouseleave', () => {
+        second.style.display = 'none';
+        lens.style.display = 'none';
+        
+    })
+
+    window.addEventListener('mousemove', (e) => {
+        console.log(e.clientX, e.clientY, e.target.offsetLe)
+    })
+
+   </script>
+</body>
+</html>

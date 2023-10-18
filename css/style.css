@@ -394,7 +394,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  min-width: 30%;
+  width: 30%;
   height: 30vh;
   background-size: cover;
   margin-bottom: 20px;
@@ -539,6 +539,78 @@ body {
 
 /* Start Media Query  */
 
+/* @media (max-width: 1351px) {
+  .section-p1 {
+    padding: 40px 20px !important;
+  }
+} */
+
+@media screen and (min-width: 800px) and (max-width: 989px) {
+  .product1 .pro {
+    width: 45%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 826px) {
+  #newsletter .form {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 826px) and (max-width: 1350px) {
+  .section-p1 {
+    padding: 40px 20px !important;
+  }
+}
+
+@media (max-width: 968px) {
+  #hero {
+    padding: 0 40px;
+  }
+
+  #banner3 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  #banner3 h3 {
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 12px;
+  }
+
+  .blurry-background h4 {
+    font-size: 28px;
+    color: #222;
+    line-height: 0;
+  }
+
+  .blurry-background h2 {
+    font-size: 35px;
+    line-height: 55px;
+    color: #222;
+  }
+
+  .blurry-background h1 {
+    font-size: 35px;
+    line-height: 20px;
+    color: #222;
+  }
+
+  .blurry-background p {
+    font-size: 15px;
+    color: #465b52;
+    margin: 25px 0 20px 0;
+  }
+}
 @media (max-width: 799px) {
   .section-p1 {
     padding: 40px 40px;
@@ -594,6 +666,31 @@ body {
   #hero {
     height: 70vh;
     background-position: top 30% right 66%;
+    padding: 0 40px;
+  }
+
+  .blurry-background h4 {
+    font-size: 25px;
+    color: #222;
+    line-height: 0;
+  }
+
+  .blurry-background h2 {
+    font-size: 28px;
+    line-height: 55px;
+    color: #222;
+  }
+
+  .blurry-background h1 {
+    font-size: 30px;
+    line-height: 20px;
+    color: #222;
+  }
+
+  .blurry-background p {
+    font-size: 12px;
+    color: #465b52;
+    margin: 25px 0 20px 0;
   }
 
   #feature {
@@ -628,8 +725,8 @@ body {
   }
 
   #banner3 .banner-box {
-    max-width: 28%;
-    height: 30vh;
+    min-width: 100%;
+    height: 15vh;
   }
 
   #banner3 .banner-box h2,
@@ -648,7 +745,16 @@ body {
   }
 }
 
+@media (max-width: 619px) {
+  .product1 .pro {
+    width: 100%;
+  }
+}
+
 @media (max-width: 477px) {
+  .section-p1 {
+    padding: 20px;
+  }
   #header {
     padding: 10px 30px;
   }
@@ -662,25 +768,25 @@ body {
     background-position: 55%;
   }
 
-  h4 {
+  .blurry-background h4 {
     font-size: 19px;
     color: #222;
     line-height: 0;
   }
 
-  h2 {
+  .blurry-background h2 {
     font-size: 25px;
     line-height: 30px;
     color: #222;
   }
 
-  h1 {
+  .blurry-background h1 {
     font-size: 29px;
     line-height: 35px;
     color: #222;
   }
 
-  p {
+  .blurry-background p {
     font-size: 12px;
     color: #465b52;
     margin: 15px 0 20px 0;
@@ -689,4 +795,205 @@ body {
   #hero button {
     font-size: 12px;
   }
+
+  #feature {
+    justify-content: space-between;
+  }
+
+  #feature .fe-box {
+    width: 155px;
+    margin: 0 0 10px 0;
+  }
+
+  .product1 .pro {
+    width: 100%;
+    padding: 10;
+  }
+
+  .des h4 {
+    line-height: 20px;
+  }
+
+  .des .star {
+    line-height: 25px;
+  }
+
+  #banner {
+    height: 40vh;
+    padding: 20px;
+  }
+
+  #sm-banner .banner-box {
+    height: 30vh;
+  }
+
+  #sm-banner {
+    padding: 0 20px;
+  }
+
+  #banner3 {
+    padding: 0 20px;
+  }
+
+  #banner3 {
+    flex-direction: column;
+  }
+
+  #banner3 .banner-box {
+    min-width: 100%;
+    height: 10vh;
+  }
+
+  #newsletter {
+    padding: 40px 20px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  .copyright p {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  #navbar {
+    width: 215px;
+  }
+}
+
+/* shop page */
+
+#page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/10458835/pexels-photo-10458835.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  text-align: center;
+}
+
+#page-header div h1,
+#page-header div p {
+  color: #fff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* single product  */
+
+#proDetails {
+  display: flex;
+  margin-top: 20px;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#proDetails .single-pro-image {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  margin-right: 50px;
+  overflow: hidden;
+}
+
+#main-image-div {
+  overflow: hidden !important;
+  height: 80%;
+}
+
+#small-image-parent {
+  position: relative;
+  z-index: 2 !important;
+  background-color: #fff;
+  height: 20%;
+}
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 8px;
+}
+
+.small-image-col {
+  /* flex-basis work like as max-width  */
+  flex-basis: 24%;
+  height: 100%;
+  /* max-width: 24%; */
+  cursor: pointer;
+}
+
+#proDetails .single-pro-details {
+  position: relative;
+  width: 50%;
+  padding-top: 30px;
+  display: block;
+}
+
+#proDetails #zoom-image {
+  width: 50%;
+  background-color: #f0f0f0;
+  background-size: 350% 350%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: none;
+}
+
+#lens {
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  display: none;
+}
+
+#proDetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#proDetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#proDetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+#proDetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#proDetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#proDetails .single-pro-details button {
+  background: #088178;
+  color: #fff;
+}
+
+#proDetails .single-pro-details span {
+  line-height: 25px;
 }
