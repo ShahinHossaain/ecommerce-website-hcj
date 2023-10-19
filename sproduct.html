@@ -245,29 +245,31 @@
                 let mainImageDivDiv = document.querySelector('#main-image-div')
                 let second = document.getElementById('second')
 
-    mainImage.addEventListener('mousemove', (e) => {
-                zoomImage.style.display = 'block';
-                singleProDetails.style.display = 'none';
+    if(window.innerWidth > 968) {
+        mainImage.addEventListener('mousemove', (e) => {
+            zoomImage.style.display = 'block';
+            singleProDetails.style.display = 'none';
 
-                let x = e.clientX - e.target.offsetLeft;
-                let y = e.clientY - e.target.offsetTop;
-
-
-
-
-                console.log('width', ((e.clientX - left) / divWidth) * 100)
-                console.log('height', ((e.clientY - topp) / divHeight) * 100 )
-                leftPercent = ((e.clientX - left) / divWidth) * 100;
-                topPercent = ((e.clientY - topp) / divHeight) * 100 ;
-
-                lens.style.left = e.clientX  - left + 'px';
-                lens.style.top = e.clientY  - topp + 'px';
-
-                zoomImage.style.backgroundPosition = leftPercent + '%' + topPercent + '%';
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
 
 
-                lens.style.display = 'block';
-    })
+
+
+            console.log('width', ((e.clientX - left) / divWidth) * 100)
+            console.log('height', ((e.clientY - topp) / divHeight) * 100)
+            leftPercent = ((e.clientX - left) / divWidth) * 100;
+            topPercent = ((e.clientY - topp) / divHeight) * 100;
+
+            lens.style.left = e.clientX - left + 'px';
+            lens.style.top = e.clientY - topp + 'px';
+
+            zoomImage.style.backgroundPosition = leftPercent + '%' + topPercent + '%';
+
+
+            lens.style.display = 'block';
+        })
+    }
 
     mainImageDivDiv.addEventListener('mouseleave', () => {
                     // second.style.display = 'none';

@@ -610,6 +610,8 @@ body {
     color: #465b52;
     margin: 25px 0 20px 0;
   }
+
+  /* sproduct css  */
 }
 @media (max-width: 799px) {
   .section-p1 {
@@ -897,6 +899,7 @@ body {
 
 #proDetails {
   display: flex;
+  justify-content: space-between;
   margin-top: 20px;
   height: 90vh;
   overflow: hidden;
@@ -904,9 +907,8 @@ body {
 
 #proDetails .single-pro-image {
   position: relative;
-  width: 40%;
+  width: 42%;
   height: 100%;
-  margin-right: 50px;
   overflow: hidden;
 }
 
@@ -938,7 +940,7 @@ body {
 
 #proDetails .single-pro-details {
   position: relative;
-  width: 50%;
+  width: 53%;
   padding-top: 30px;
   display: block;
 }
@@ -997,3 +999,55 @@ body {
 #proDetails .single-pro-details span {
   line-height: 25px;
 }
+
+/* sm devices 640px */
+
+/* md device 768px */
+
+/* xl-md device 968px  */
+/* @media (max-width: 477px) */
+@media only screen and (max-width: 968px) {
+  #proDetails {
+    display: block;
+    margin-top: 0px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #proDetails .single-pro-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    overflow: hidden;
+  }
+
+  #main-image-div {
+    height: 65vh;
+  }
+
+  #small-image-parent {
+    height: 23vh;
+  }
+
+  #proDetails .single-pro-details {
+    width: 100%;
+  }
+
+  #proDetails .single-pro-details h4 {
+    padding: 20px 0 10px 0;
+  }
+
+  .product1 .pro-container {
+    flex-direction: column;
+  }
+
+  .product1 .pro {
+    width: 100%;
+  }
+}
+/* lg device 1024px */
+
+/* xl device 1280px */
+
+/* 2xl device 1536px */
