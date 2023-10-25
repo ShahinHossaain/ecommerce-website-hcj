@@ -1,96 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-color: antiquewhite; 
-        }
-        div {
-            width: 500px;
-            height: 500px;
-            border: 1px solid #000;
-            background: url(image/products/f1.jpg);
-            background-size: 100% 100%;
-            position: absolute;
-            overflow: hidden;
-        }
-        #first {
-            top: 50%;
-            left: 21%;
-            transform: translateY(-50%);
-        }
-        #second {
-            background-size: 600% 600%;
-            top: 50%;
-            left: 53%;
-            transform: translateY(-50%);
-            display: none;
-        }
-        #lens {
-            width: 150px;
-            height: 150px;
-            background: rgba(0, 0, 0, .4);
-            position: absolute;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            display: none;
-        }
-    </style>
+    <title>E-commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="blog.html">
 </head>
+
 <body>
-   <div id="first">
-    <div id="lens">
+    <section id="header">
+        <img style="height: 35px;border-radius: 100%;"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkBy8JRJVTRayqtduriksP5agMpCwjSKArQ&usqp=CAU"
+            alt="" srcset="">
 
-    </div>
-   </div>
-   <div id="second">
-   </div>
+        <div>
+            <ul id="navbar">
+                <i id="sideNavClose" class="fa-regular fa-circle-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html "><i class="fa fa-shopping-bag"></i></a></li>
+            </ul>
+        </div>
 
-   <script>
-    let lens = document.getElementById('lens')
-    let first = document.getElementById('first')
-    let second = document.getElementById('second')
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
 
-    first.addEventListener('mousemove', (e) => {
-        let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY - e.target.offsetTop;
+    </section>
 
-        console.log('ee', e.target.offsetLeft, e.target.offsetTop, x, y)
+    <section id="about-page-header">
+        <div class="blurry-background">
+            <h1 style="color: #fff;">#KnowUs</h1>
+            <p style="color: #fff;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
 
-        lens.style.left = x + 'px';
-        lens.style.top = y + 250 + 'px';
+    <section id="about-head" class="section-p1">
+        <img src="	https://images.pexels.com/photos/2274725/pexels-photo-2274725.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
 
-        second.style.backgroundPositionX = (x - (500 / 2 / 6)) * -6 + 'px' 
-        // second.style.backgroundPositionX = x + 'px' 
-        second.style.backgroundPositionY = (y - (500 / 2 / 6) + 250) * -6 + 'px'; 
+        <div>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nobis nulla veritatis facere cupiditate repellendus, aliquid ipsam, officia, minus id iste! Cupiditate architecto, quod facere delectus molestiae quis! Alias culpa corporis quam dicta facere ex, laborum eum nesciunt asperiores sunt est magnam magni iusto necessitatibus tenetur molestiae praesentium quia a facilis, nobis eos cupiditate placeat accusantium nulla. Mollitia suscipit cumque, quasi vel laboriosam sunt maiores enim modi, aliquam ipsum labore aspernatur deleniti tempora saepe tempore corporis explicabo totam nesciunt sit quibusdam eligendi eaque consectetur quisquam! In dolores excepturi et magnam quas eligendi, quo deleniti debitis soluta officia quaerat labore quasi.</p>
 
-        // second.style.backgroundPositionX = -1256 + 'px';
-        // second.style.backgroundPositionY = -1358 + 'px';
+            <abbr sty title="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque enim possimus a amet ipsum laudantium, odio exercitationem unde sapiente commodi voluptatum eum. Quos, nisi animi?</abbr>
 
-        second.style.display = 'block';
-        lens.style.display = 'block';
-    })
+            <br><br>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, delectus.</marquee>
 
-    first.addEventListener('mouseleave', () => {
-        second.style.display = 'none';
-        lens.style.display = 'none';
-        
-    })
+        </div>
 
-    window.addEventListener('mousemove', (e) => {
-        console.log(e.clientX, e.clientY, e.target.offsetLe)
-    })
+    </section>
 
-   </script>
+    <section id="about-app" class="section-p1">
+        <h1>Download Our <a href="#">App</a></h1>
+        <div class="video">
+            <video autoplay muted loop src="image/video/1.mp4"></video>
+        </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="image/features/f1.png" alt="">
+            <h6>Free Shopping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/undraw_Online_payments_re_y8f2.png" alt="">
+            <h6>Send Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/f5.png" alt="">
+            <h6>Happy sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    
+    </section>
+
+    <footer class="section-p1">
+        <div id="allCol">
+            <div class="col">
+                <img style="height: 45px;border-radius: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkBy8JRJVTRayqtduriksP5agMpCwjSKArQ&usqp=CAU"
+                    alt="">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> 1000 Dhaka Cantonment</p>
+                <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+                <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-square-pinterest"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>Form App Store or Google Play</p>
+                <div class="row">
+                    <img src="image/pay/app.jpg" alt="">
+                    <img src="image/pay/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="image/pay/pay.png" alt="">
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2021, Tech ect - HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+
+
+    <script src="code.js"></script>
 </body>
+
 </html>
