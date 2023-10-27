@@ -428,6 +428,10 @@ body {
   background: cover;
 }
 
+.apply-input {
+  border: 1px solid #e1e9f5;
+}
+
 .newsText h4 {
   font-size: 22px;
   font-weight: 700;
@@ -444,12 +448,14 @@ body {
   color: #ffbd27;
 }
 
-#newsletter .form {
+#newsletter .form,
+.apply-input {
   display: flex;
-  width: 40%;
+  width: 100%;
 }
 
-#newsletter input {
+#newsletter input,
+.apply-input input {
   height: 3.125rem;
   padding: 0 1.25em;
   font-size: 14px;
@@ -459,7 +465,8 @@ body {
   outline: none;
 }
 
-#newsletter button {
+#newsletter button,
+.apply-input button {
   background-color: #088178;
   color: #fff;
   /* new known  */
@@ -558,15 +565,28 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 825px) {
+  #form-details {
+    margin: 40px 20px !important;
+  }
+}
+
 @media screen and (min-width: 800px) and (max-width: 826px) {
   #newsletter .form {
     width: 80%;
+  }
+  .section-p1 {
+    padding: 40px 40px;
   }
 }
 
 @media screen and (min-width: 826px) and (max-width: 1350px) {
   .section-p1 {
     padding: 40px 20px !important;
+  }
+
+  #form-details {
+    margin: 40px 20px !important;
   }
 }
 
@@ -851,7 +871,8 @@ body {
     padding: 40px 20px;
   }
 
-  #newsletter .form {
+  #newsletter .form,
+  .apply-input {
     width: 100%;
   }
 
@@ -862,6 +883,10 @@ body {
 
   #navbar {
     width: 215px;
+  }
+
+  #form-details {
+    margin: 40px 20px !important;
   }
 }
 
@@ -1092,7 +1117,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://images.pexels.com/photos/2274725/pexels-photo-2274725.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-image: url("https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1600");
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -1130,6 +1155,220 @@ body {
   height: 100%;
   border-radius: 20px;
 }
+
+/* about end  */
+
+/* contact start  */
+
+#contact-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/66875/plumage-feather-bird-pink-66875.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-details .details {
+  width: 100%;
+}
+
+#contact-details .details span {
+  font-size: 12px;
+}
+
+#contact-details .details h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#contact-details .details li {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+#contact-details .details i {
+  font-size: 14px;
+}
+#contact-details .details p {
+  font-size: 14px;
+}
+
+#contact-details .map {
+  width: 100%;
+  height: 400px;
+}
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#form-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0 100px;
+  align-items: left;
+  gap: 25px;
+  border: 1px solid #d8dbdf;
+  margin: 40px 40px;
+}
+
+#form-details form {
+  width: 100%;
+}
+
+#form-details form h2 {
+  font-size: 33px;
+  margin: 20px 0;
+}
+
+#form-details form input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #d8dbdf;
+  border-radius: 5px;
+}
+#form-details form button {
+  background: #088178;
+  color: #fff;
+}
+
+.people {
+  display: flex;
+  gap: 15px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.people-img-div img {
+  /* width: 100%; */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.people-details p {
+  font-size: 15px;
+  line-height: 2px;
+}
+
+/* contact end  */
+
+/* cart start  */
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 70px;
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+#cart table td:nth-child(2),
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+  border: 1px solid #dfe8f6;
+  border-right: none;
+  border-left: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+#cart td i {
+  font-size: 25px;
+}
+
+#cart-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+#apply-coupon {
+  width: 100%;
+}
+
+#cart {
+  overflow-x: auto;
+}
+
+#cart-total {
+  width: 100%;
+  border: 1px solid #dfe8f6;
+  padding: 20px 30px;
+}
+
+#cart-total table {
+  width: 100%;
+  margin: 15px 0;
+  border-collapse: collapse;
+}
+
+#cart-total table td {
+  border: 1px solid #dfe8f6;
+  padding: 15px 20px;
+  width: 50%;
+}
+
+#cart-total button {
+  background-color: #088178;
+  color: #fff;
+}
+
+/* cart end  */
+
 /* sm devices 640px */
 @media only screen and (min-width: 640px) {
   #blog .blog-box {
@@ -1145,6 +1384,49 @@ body {
   .blog-details {
     width: 50%;
   }
+
+  /* cart start  */
+
+  #cart-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 128px; */
+    gap: 2px;
+  }
+
+  #apply-coupon {
+    width: 50%;
+  }
+
+  #cart {
+    overflow-x: auto;
+  }
+
+  #cart-total {
+    width: 50%;
+    border: 1px solid #dfe8f6;
+    padding: 20px 30px;
+  }
+
+  #cart-total table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+  }
+
+  #cart-total table td {
+    border: 1px solid #dfe8f6;
+    padding: 15px 20px;
+    width: 50%;
+  }
+
+  #cart-total button {
+    background-color: #088178;
+    color: #fff;
+  }
+
+  /* cart end  */
 }
 
 /* md device 768px */
@@ -1178,7 +1460,119 @@ body {
     height: 100%;
     border-radius: 20px;
   }
+
+  /* contact start  */
+
+  #contact-page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.pexels.com/photos/66875/plumage-feather-bird-pink-66875.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  #contact-details {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #contact-details .details {
+    width: 40%;
+  }
+
+  #contact-details .details span {
+    font-size: 12px;
+  }
+
+  #contact-details .details h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+  }
+  #contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+
+  #contact-details .details li {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+  }
+  #contact-details .details i {
+    font-size: 14px;
+  }
+  #contact-details .details p {
+    font-size: 14px;
+  }
+
+  #contact-details .map {
+    width: 55%;
+    height: 400px;
+    margin-right: 0;
+  }
+  #contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  #form-details {
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 80px;
+  }
+
+  #form-details form {
+    width: 50%;
+  }
+
+  #form-details form h2 {
+    font-size: 33px;
+    margin: 20px 0;
+  }
+
+  #form-details form input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d8dbdf;
+    border-radius: 5px;
+  }
+  #form-details form button {
+    background: #088178;
+    color: #fff;
+  }
+
+  .people-img-div img {
+    /* width: 100%; */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .people-details p {
+    font-size: 15px;
+    line-height: 2px;
+  }
+
+  /* cart page start  */
+
+  #cart-add {
+    gap: 50px;
+  }
+
+  /* cart page end  */
 }
+
+/* contact end  */
 /* xl-md device 968px  */
 @media only screen and (max-width: 968px) {
   #proDetails {
@@ -1226,6 +1620,10 @@ body {
 @media (min-width: 968px) {
   #blog {
     padding: 100px 100px 0 100px;
+  }
+
+  #cart-add {
+    gap: 80px;
   }
 }
 /* lg device 1024px */
